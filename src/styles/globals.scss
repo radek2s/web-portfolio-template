@@ -1,0 +1,76 @@
+@use './theme/gamification' as theme;
+
+@font-face {
+  font-family: "LexendDeca";
+  src: url("../../fonts/lexend-deca/LexendDeca.ttf");
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../../fonts/maven-pro/MavenPro.ttf");
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.active {
+  color: theme.$primary-color-50;
+}
+
+body {
+  color: theme.$white-color;
+  font-family: "LexendDeca";
+  font-weight: 300;
+  font-size: theme.$font-size-base;
+  background: linear-gradient(
+    90deg, 
+    theme.$background-color-40 0%, 
+    theme.$background-color-50 100%
+  );
+}
+p {
+  margin: 0;
+  line-height: 1.33em;
+}
+h1, h2 {
+  color: theme.$primary-color-50;
+  font-family: "Maven Pro";
+  font-weight: 900;
+  margin: 0;
+}
+h1 {
+  font-size: theme.$font-size-h1;
+}
+h2 {
+  font-size: theme.$font-size-h2;
+}
+button {
+  background: none;
+  padding: 15px 32px;
+  font-family: "Maven Pro";
+  font-weight: 600;
+  font-size: theme.$font-size-h3;
+  color: theme.$primary-color-50;
+  border: solid theme.$primary-color-50 1px;
+  border-radius: 8px;
+
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(
+    110deg, 
+    theme.$primary-color-40 0%, 
+    theme.$primary-color-50 100%
+  );
+    color: theme.$white-color;
+
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
