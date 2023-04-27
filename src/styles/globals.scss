@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  overflow-y: clip;
+}
+
 .active {
   color: theme.$primary-color-50;
 }
