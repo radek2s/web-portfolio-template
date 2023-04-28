@@ -5,6 +5,10 @@ import localFont from 'next/font/local'
 import styles from '@/styles/Home.module.scss'
 import { Hero } from '@/components/hero/Hero'
 import { About } from '@/components/about/About'
+import { Expirience } from '@/components/expirience/Expirience'
+import { Work } from '@/components/projects/Work'
+import { Contact } from '@/components/contact/Contact'
+import { Footer } from '@/layout/Footer'
 
 export default function Home() {
   return (
@@ -16,8 +20,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-        <Hero/>
-        <About/>
+        <Hero />
+        <About />
+        <Expirience />
+        <Work />
+        <Contact />
+        <Footer />
 
       </main>
     </>

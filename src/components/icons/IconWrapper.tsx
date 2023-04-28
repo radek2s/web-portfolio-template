@@ -16,27 +16,31 @@ import { KotlinIcon } from "./Kotlin";
 import { NodeJsIcon } from "./NodeJS";
 import { SassIcon } from "./Sass";
 import { WordPressIcon } from "./WordPress";
+import { LinkedInIcon } from "./LinkedIn";
+import { GitHubIcon } from "./GitHub";
 
-export type IconName = 'adobe-xd' | 'angular' | 'css' | 'docker' | 'figma' | 'html' | 'java' 
-    | 'java-script' | 'kotlin' | 'node-js' | 'react' | 'sass' | 'type-script' | 'vue' | 'word-press'
+export type IconName = 'adobe-xd' | 'angular' | 'css' | 'docker' | 'figma' | 'github' | 'html' | 'java'
+    | 'java-script' | 'kotlin' | 'linked-in' | 'node-js' | 'react' | 'sass' | 'type-script' | 'vue' | 'word-press'
 
 function getIcon(iconName: IconName) {
-    switch(iconName) {
-        case 'adobe-xd': return <AdobeXdIcon/>
-        case 'angular': return <AngularIcon/>
-        case 'css': return <CSSIcon/>
-        case 'docker': return <DockerIcon/>
-        case 'figma': return <FigmaIcon/>
-        case 'html': return <HTMLIcon/>
-        case 'java': return <JavaIcon/>
-        case 'java-script': return <JavaScriptIcon/>
-        case 'kotlin': return <KotlinIcon/>
-        case 'node-js': return <NodeJsIcon/>
-        case 'react': return <ReactIcon/>
-        case 'sass': return <SassIcon/>
-        case 'type-script': return <TypeScriptIcon/>
-        case 'vue': return <VueIcon/>
-        case 'word-press': return <WordPressIcon/>
+    switch (iconName) {
+        case 'adobe-xd': return <AdobeXdIcon />
+        case 'angular': return <AngularIcon />
+        case 'css': return <CSSIcon />
+        case 'docker': return <DockerIcon />
+        case 'figma': return <FigmaIcon />
+        case 'github': return <GitHubIcon />
+        case 'html': return <HTMLIcon />
+        case 'java': return <JavaIcon />
+        case 'java-script': return <JavaScriptIcon />
+        case 'kotlin': return <KotlinIcon />
+        case 'linked-in': return <LinkedInIcon />
+        case 'node-js': return <NodeJsIcon />
+        case 'react': return <ReactIcon />
+        case 'sass': return <SassIcon />
+        case 'type-script': return <TypeScriptIcon />
+        case 'vue': return <VueIcon />
+        case 'word-press': return <WordPressIcon />
         default: throw new Error("Unsupported icon type!")
     }
 }
@@ -44,7 +48,7 @@ function getIcon(iconName: IconName) {
 interface IconProps {
     name: IconName
 }
-export const IconWrapper:FC<IconProps> = ({name}) => {
+export const IconWrapper: FC<IconProps> = ({ name }) => {
 
 
 

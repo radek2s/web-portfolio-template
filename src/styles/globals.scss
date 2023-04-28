@@ -29,28 +29,32 @@ body {
   font-family: "LexendDeca";
   font-weight: 300;
   font-size: theme.$font-size-base;
-  background: linear-gradient(
-    90deg, 
-    theme.$background-color-40 0%, 
-    theme.$background-color-50 100%
-  );
+  background: linear-gradient(90deg,
+      theme.$background-color-40 0%,
+      theme.$background-color-50 100%);
 }
+
 p {
   margin: 0;
   line-height: 1.33em;
 }
-h1, h2 {
+
+h1,
+h2 {
   color: theme.$primary-color-50;
   font-family: "Maven Pro";
   font-weight: 900;
   margin: 0;
 }
+
 h1 {
   font-size: theme.$font-size-h1;
 }
+
 h2 {
   font-size: theme.$font-size-h2;
 }
+
 button {
   background: none;
   padding: 15px 32px;
@@ -63,14 +67,40 @@ button {
 
   &:hover {
     cursor: pointer;
-    background: linear-gradient(
-    110deg, 
-    theme.$primary-color-40 0%, 
-    theme.$primary-color-50 100%
-  );
+    background: linear-gradient(110deg,
+        theme.$primary-color-40 0%,
+        theme.$primary-color-50 100%);
     color: theme.$white-color;
 
   }
+}
+
+.card {
+  background-color: #29292940;
+  border: 1px solid #E1E1E127;
+  padding: 16px;
+  border-radius: 8px;
+
+}
+
+.spacer {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.content-section {
+  margin: 0 10vw;
+  min-height: 50vh;
+
+  h2 {
+    margin-bottom: 5vh;
+  }
+}
+
+.text-right {
+  text-align: right;
 }
 
 @media (prefers-color-scheme: dark) {

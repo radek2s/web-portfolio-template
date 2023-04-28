@@ -1,0 +1,66 @@
+.project-wrapper {
+    display: flex;
+    align-items: center;
+
+    &--card {
+        padding: 60px;
+        flex-basis: 60%;
+        // width: 600px;
+    }
+
+    &--image {
+        height: 100%;
+        flex-basis: 70%;
+    }
+
+    &.left {
+        .project-wrapper {
+            &--card {
+                padding-right: 100px;
+            }
+
+            &--image {
+                margin-left: -70px;
+
+            }
+        }
+    }
+
+    &.right {
+        flex-direction: row-reverse;
+
+        .project-wrapper {
+            &--card {
+                padding-left: 100px;
+                text-align: right;
+            }
+
+            &--image {
+                margin-right: -170px;
+                z-index: 5;
+
+            }
+        }
+    }
+}
+
+.project {
+    &--title {
+        font-size: 60px;
+        font-family: 'Maven Pro';
+        font-weight: 900;
+        margin: 0;
+    }
+
+    &--stack {
+        text-transform: uppercase;
+        font-family: 'Maven Pro';
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.2ch;
+    }
+
+    &--description {
+        margin-bottom: 16px;
+    }
+}
