@@ -1,0 +1,15 @@
+@mixin decorativeBar($color) {
+    border-left: 1px solid $color;
+
+    &::before {
+        content: "";
+        display: block;
+        border: 2px solid $color;
+        border-radius: 50%;
+        transform: translate(-9px, 42px);
+        width: 16px;
+        height: 16px;
+        z-index: 1;
+        background-color: #322E47;
+    }
+}
