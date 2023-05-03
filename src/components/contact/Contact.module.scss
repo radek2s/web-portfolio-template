@@ -1,8 +1,11 @@
 .contact-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-bottom: 256px;
+
+    &-test {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &--header {
         margin-bottom: 32px;

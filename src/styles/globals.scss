@@ -1,5 +1,7 @@
 @use './theme/gamification' as theme;
 @import './mixins/_mixins';
+@import './mixins/animations';
+
 
 @font-face {
   font-family: "LexendDeca";
@@ -89,6 +91,9 @@ button {
   justify-content: space-between;
   font-weight: 600;
   font-size: 24px;
+  margin-bottom: 24px;
+  // animation: slide-up-in 1s cubic-bezier(0.1, 0.9, 0.2, 1);
+
 }
 
 .content-section {
@@ -111,26 +116,59 @@ button {
 }
 
 .app-section {
-  // border-left: 1px solid salmon;
-  margin-left: 8px;
+  margin-left: 64px;
   padding: 10px 0;
-  @include decorativeBar(salmon);
+  @include decorativeBar(theme.$primary-color-50);
 
   &:nth-of-type(2) {
-
-    @include decorativeBar(blue);
-
+    @include decorativeBar(theme.$secondary-color-50);
   }
 
-  // &::before {
-  //   content: "";
-  //   display: block;
-  //   border: 2px solid salmon;
-  //   border-radius: 50%;
-  //   transform: translate(-9px, 42px);
-  //   width: 16px;
-  //   height: 16px;
-  //   z-index: 1;
-  //   background-color: #322E47;
-  // }
+  &:nth-of-type(3) {
+    @include decorativeBar(theme.$primary-color-40);
+  }
+
+  &.end {
+    position: relative;
+    @include decorativeBar(theme.$secondary-color-50);
+    border-left: unset;
+
+    &::before {
+      position: absolute;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 50%;
+      border: unset;
+      border-left: 2px solid theme.$secondary-color-50;
+      border-radius: unset;
+      transform: unset;
+      width: unset;
+      z-index: 1;
+    }
+  }
+
+  &.start {
+    position: relative;
+    border-left: unset;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 30%;
+      border: unset;
+      border-left: 2px solid theme.$primary-color-50;
+      border-radius: unset;
+      transform: unset;
+      width: unset;
+
+    }
+
+  }
 }
