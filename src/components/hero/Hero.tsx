@@ -2,6 +2,8 @@ import { FC } from "react";
 import styles from '@/styles/HomeHero.module.scss'
 import { MainAnimation } from "./MainAnimation";
 import { SectionWrapper } from "@/layout/SectionWrapper";
+import { AnimatedCounter } from "@/layout/AnimatedCounter";
+import { SlideUpWrapper } from "@/layout/SlideUpWrapper";
 
 export const Hero: FC = () => {
 
@@ -26,25 +28,28 @@ export const Hero: FC = () => {
                 </div>
 
                 <div className={`${styles.heroContent}`}>
-                    <div className={`${styles.resultsWrapper}`}>
+
+                    <SlideUpWrapper className={`${styles.resultsWrapper}`} delay={1.8}>
                         <div className={`${styles.results}`}>
-                            <span className={`${styles.key}`}>9</span>
+                            <span className={`${styles.key}`}><AnimatedCounter to={9} duration={0.3} delay={2} /></span>
                             <span>enterprise<br />projects</span>
                         </div>
                         <div className={`${styles.results}`}>
-                            <span className={`${styles.key}`}>5</span>
+                            <span className={`${styles.key}`}><AnimatedCounter to={5} duration={0.3} delay={2.4} /></span>
                             <span>designed and released<br />web applications</span>
                         </div>
                         <div className={`${styles.results}`}>
-                            <span className={`${styles.key}`}>6+</span>
+                            <span className={`${styles.key}`}><AnimatedCounter to={6} duration={0.3} delay={2.8} />+</span>
                             <span>open-source<br />projects</span>
                         </div>
-                    </div>
 
-                    <div className={`${styles.quoteWrapper}`}>
+                    </SlideUpWrapper>
+
+
+                    <SlideUpWrapper className={`${styles.quoteWrapper}`} delay={4}>
                         <p className={`${styles.quoteText}`}>“Clean code always looks like it was <br />written by someone who cares.”</p>
                         <span className={`${styles.quoteAuthor}`}>― Robert C. Martin, Clean Code</span>
-                    </div>
+                    </SlideUpWrapper>
                 </div>
 
 

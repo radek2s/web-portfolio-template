@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from './projectCard.module.scss'
 import { MOTION_DURATION_3, SlideUpWrapper } from "@/layout/SlideUpWrapper";
 
-interface ProjectData {
+export interface ProjectData {
     name: string,
     stack: string[],
     description: string,

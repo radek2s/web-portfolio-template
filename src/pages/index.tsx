@@ -9,6 +9,7 @@ import { Expirience } from '@/components/expirience/Expirience'
 import { Work } from '@/components/projects/Work'
 import { Contact } from '@/components/contact/Contact'
 import { Footer } from '@/layout/Footer'
+import { OtherProjects } from '@/components/projects/OtherProjects'
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <About />
         <Expirience />
         <Work />
+        <OtherProjects />
         <Contact />
         <Footer />
 

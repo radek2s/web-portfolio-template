@@ -47,12 +47,13 @@ function getIcon(iconName: IconName) {
 
 interface IconProps {
     name: IconName
+    className?: string
 }
-export const IconWrapper: FC<IconProps> = ({ name }) => {
+export const IconWrapper: FC<IconProps> = ({ name, className = '' }) => {
 
 
 
-    return <div className={`icon-wrapper ${styles.icons}`}>
+    return <div className={`icon-wrapper ${styles.icons} ${className}`}>
         {getIcon(name)}
     </div>
 }

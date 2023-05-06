@@ -8,7 +8,7 @@ import { SectionWrapper } from "@/layout/SectionWrapper";
 export const Work: FC = () => {
     return (<SectionWrapper>
         <div className="content-section">
-            <h2>My work</h2>
+            <h2>Featured projects</h2>
 
             <div className={styles['projects']}>
                 <ProjectCard
@@ -40,30 +40,13 @@ export const Work: FC = () => {
                     }}
                 />
 
-                <ProjectCard
-                    variant="right"
-                    imageSrc={"/images/proj_FrameworkHero.png"}
-                    project={{
-                        name: "Karcioszki the Game",
-                        stack: ["ANGULAR", "TypeScript", "jAVA", "SPRING", "WEBSOCKETS"],
-                        description: "ProProgressive Web Application (PWA) build with React and Typescript to manage and display bets between two people. Store data on local database by using dedicated Node Server or connect to your own Firebase store.\nStable version of application is hosted on GitHub Pages. To check how it looks like just open the running environment."
-                    }}
-                />
 
-                <ProjectCard
-                    imageSrc={"/images/proj_FrameworkHero.png"}
-                    project={{
-                        name: "DA Kraków",
-                        stack: ["WordPress", "JavaScript", "CSS"],
-                        description: "ProProgressive Web Application (PWA) build with React and Typescript to manage and display bets between two people. Store data on local database by using dedicated Node Server or connect to your own Firebase store.\nStable version of application is hosted on GitHub Pages. To check how it looks like just open the running environment."
-                    }}
-                />
 
             </div>
 
-            <div className={styles['link-wrapper']}>
+            {/* <div className={styles['link-wrapper']}>
                 <a href="" className={styles['link--element']}>show more</a>
-            </div>
+            </div> */}
         </div>
 
     </SectionWrapper>
