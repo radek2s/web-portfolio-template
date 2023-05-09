@@ -33,6 +33,11 @@
             &--card {
                 padding-left: 100px;
                 text-align: right;
+
+                .project--actions {
+                    // display: flex;
+                    flex-direction: row-reverse;
+                }
             }
 
             &--image {
@@ -40,6 +45,7 @@
                 z-index: 5;
 
             }
+
         }
     }
 }
@@ -62,5 +68,23 @@
 
     &--description {
         margin-bottom: 16px;
+    }
+
+    &--actions {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        a {
+            &:hover svg path {
+                fill: #7871F5;
+            }
+
+            &>div {
+                width: 2.3em;
+                height: 2.3em;
+            }
+        }
+
     }
 }

@@ -5,9 +5,9 @@ import { useInView } from "react-intersection-observer";
 export const MOTION_DURATION_3 = 0.3
 const TRANSLATE_SHIFT = 25
 
-function wrapperVariants(delay: number = 0) {
+function wrapperVariants(delay: number = 0, duration = MOTION_DURATION_3) {
     return {
-        visible: { opacity: 1, transition: { delay, delayChildren: delay, staggerChildren: MOTION_DURATION_3 } },
+        visible: { opacity: 1, transition: { delay, delayChildren: delay, staggerChildren: duration } },
         hidden: { opacity: 0 }
     }
 }
@@ -21,10 +21,11 @@ function childVariants() {
 
 interface Props {
     delay?: number
+    duration?: number
     className?: string
     children: React.ReactNode[] | React.ReactNode
 }
-export const SlideUpWrapper: FC<Props> = ({ children, className, delay = 0 }) => {
+export const SlideUpWrapper: FC<Props> = ({ children, className, delay = 0, duration = MOTION_DURATION_3 }) => {
     const controls = useAnimation()
     const [ref, inView] = useInView()
     useEffect(() => {
@@ -36,7 +37,7 @@ export const SlideUpWrapper: FC<Props> = ({ children, className, delay = 0 }) =>
         <motion.div
             ref={ref}
             animate={controls}
-            variants={wrapperVariants(delay)}
+            variants={wrapperVariants(delay, duration)}
             initial="hidden"
             className={className}
         >

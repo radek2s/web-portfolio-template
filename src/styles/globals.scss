@@ -58,10 +58,12 @@ h2 {
   font-size: theme.$font-size-h2;
 }
 
+.btn,
 button {
   background: none;
   padding: 15px 32px;
   font-family: "Maven Pro";
+  text-decoration: none;
   font-weight: 600;
   font-size: theme.$font-size-h3;
   color: theme.$primary-color-50;
@@ -99,6 +101,7 @@ button {
 .content-section {
   margin: 0 10vw;
   min-height: 50vh;
+  padding-bottom: 10vh;
 
   h2 {
     margin-bottom: 5vh;
