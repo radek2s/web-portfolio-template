@@ -86,6 +86,29 @@ button {
   padding: 16px;
   border-radius: 8px;
 
+  &.hover {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border: 1px solid #E1E1E137;
+    background-color: #29292930;
+
+
+    .hover-light {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      margin-left: -32px;
+      margin-top: -32px;
+      top: var(--y);
+      left: var(--x);
+      background-color: white;
+      border-radius: 300px;
+      filter: blur(100px);
+      z-index: -1;
+    }
+  }
+
 }
 
 .spacer {
@@ -180,4 +203,38 @@ button {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+}
+
+
+.tooltip {
+  position: relative;
+
+  &--text {
+    position: absolute;
+    background-color: black;
+    padding: 3px;
+    margin-top: 8px;
+    border-radius: 4px;
+    width: 120px;
+    left: 50%;
+    margin-left: -60px;
+    top: 103%;
+    visibility: hidden;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: calc(50% - 9px);
+      border: solid black 8px;
+      border-color: transparent transparent black transparent;
+    }
+  }
+
+  &:hover {
+    .tooltip--text {
+      visibility: visible;
+    }
+  }
 }

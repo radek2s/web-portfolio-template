@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Icon, IconName } from "../icons";
 import styles from './techStack.module.scss';
 import { SlideUpWrapper } from "@/layout/SlideUpWrapper";
+import { Tooltip } from "@/layout/Tooltip";
 
 type TechStackType = {
     icon: IconName,
@@ -59,8 +60,10 @@ export const TechStackIcons: FC = () => {
     return (
         <SlideUpWrapper className={styles['tech--wrapper']} duration={0.08}>
             {knownTechStack.map(({ icon, tooltip }) => <div key={icon} className={styles['tech-badge']}>
-                <Icon name={icon} className={styles['tech-badge--icon']} />
-                <span className={styles['tech-badge--tooltip']}>{tooltip}</span>
+                <Tooltip text={tooltip}>
+                    <Icon name={icon} className={styles['tech-badge--icon']} />
+                </Tooltip>
+                {/* <span className={styles['tech-badge--tooltip']}></span> */}
             </div>)}
         </SlideUpWrapper>
     )

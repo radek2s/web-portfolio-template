@@ -12,7 +12,7 @@ export const Work: FC = () => {
 
             <div className={styles['projects']}>
                 <ProjectCard
-                    imageSrc={"/images/proj_ScadaLTS.png"}
+                    imageSrc={"/images/proj_ScadaLTS3.png"}
                     project={{
                         name: "Scada-LTS UI 2.0",
                         stack: ["VUE", "JAVASCRIPT", "RESTAPI", "WEBSOCKETS", "DOCKER", "CI/CD", "JAVA"],
@@ -34,7 +34,7 @@ export const Work: FC = () => {
                 />
 
                 <ProjectCard
-                    imageSrc={"/images/proj_ScadaLTS.png"}
+                    imageSrc={"/images/proj_BetKeeper2.png"}
                     project={{
                         name: "Bet Keeper",
                         stack: ["React", "TypeScript", "Firebase", "PWA", "NodeJS", "DOCKER"],
