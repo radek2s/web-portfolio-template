@@ -1,5 +1,5 @@
-import { Icon } from "@/components/icons";
 import { FC } from "react";
+import { Icon } from "@/components/icons";
 import styles from '@/styles/Footer.module.scss'
 
 export const Footer: FC = () => {

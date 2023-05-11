@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
-import styles from '@/styles/HomeHeroAnimation.module.scss'
+import styles from './mainAnimation.module.scss'
 
-export const MainAnimation:FC = () => {
+export const MainAnimation: FC = () => {
 
     const [currentStep, setStep] = useState<number>(0)
     const [processing, setProcessing] = useState<boolean>(true)
@@ -17,7 +17,7 @@ export const MainAnimation:FC = () => {
     const htmlString = "return (<h1>Hello World from MyApp!</h1>)}"
 
     useEffect(() => {
-        if(currentStep === 2) {
+        if (currentStep === 2) {
             setProcessing(true)
             const interval = setTimeout(() => {
                 setProcessing(false)
@@ -41,48 +41,48 @@ export const MainAnimation:FC = () => {
 
         {currentStep === 0 && (
             <div className={`${styles.createWrapper}`}>
-            <div className={`${styles.createComponentHeader} ${styles.card}`}>
-
-            </div>
-            <div className={styles.createComponentContent}>
-                <div className={styles.createComponentNavbar}>
-                    <div className={`${styles.createComponentLink} ${styles.card}`}/>
-                    <div className={`${styles.createComponentLink} ${styles.card}`}/>
-                    <div className={`${styles.createComponentLink} ${styles.card}`}/>
+                <div className={`${styles.createComponentHeader} ${styles.card}`}>
 
                 </div>
-                <div className={`${styles.createComponentPage} ${styles.card}`}>
+                <div className={styles.createComponentContent}>
+                    <div className={styles.createComponentNavbar}>
+                        <div className={`${styles.createComponentLink} ${styles.card}`} />
+                        <div className={`${styles.createComponentLink} ${styles.card}`} />
+                        <div className={`${styles.createComponentLink} ${styles.card}`} />
+
+                    </div>
+                    <div className={`${styles.createComponentPage} ${styles.card}`}>
+
+                    </div>
 
                 </div>
-
             </div>
-        </div>
 
-        )} 
+        )}
         {currentStep === 1 && (
-        <div className={`${styles.codeWrapper}`}>
-            <div className={`${styles.codeBase}`}>
-            {htmlStringBase}
+            <div className={`${styles.codeWrapper}`}>
+                <div className={`${styles.codeBase}`}>
+                    {htmlStringBase}
+                </div>
+                <div className={`${styles.codeType}`}>
+                    {htmlString}
+                </div>
             </div>
-            <div className={`${styles.codeType}`}>
-            {htmlString}
-            </div>
-        </div>
         )}
 
-{currentStep === 2 && (
-        <div className={`${styles.deployWrapper}`}>
-            {processing ? (
-                <div className={`${styles.loader}`}/>
-            ) : (
-            <div className={`${styles.loaderFinished}`}>
-                Ready!
+        {currentStep === 2 && (
+            <div className={`${styles.deployWrapper}`}>
+                {processing ? (
+                    <div className={`${styles.loader}`} />
+                ) : (
+                    <div className={`${styles.loaderFinished}`}>
+                        Ready!
+                    </div>
+                )}
             </div>
-            )}
-        </div>
         )}
 
-        
+
 
     </div>)
 }

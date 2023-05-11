@@ -2,7 +2,7 @@ import { SectionWrapper } from "@/layout/SectionWrapper";
 import { FC } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { SimpleProjectCard } from "./SimpleProjectCard";
-import { SlideUpWrapper } from "@/layout/SlideUpWrapper";
+import { SlideUpWrapper } from "@/layout/animations/SlideUpWrapper";
 import styles from './otherProjects.module.scss';
 
 export const OtherProjects: FC = () => {

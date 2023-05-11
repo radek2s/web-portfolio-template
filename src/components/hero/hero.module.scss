@@ -1,0 +1,112 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
+.hero {
+    min-height: 85vh;
+    margin-top: 15vh;
+
+    header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &-header .header {
+        &--subtitle {
+            font-family: 'Maven Pro';
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: calc(-1 * theme.$font-size-base);
+        }
+
+        &--title {
+            margin: 0;
+            color: theme.$primary-color-50;
+        }
+
+        &--description {
+            max-width: 450px;
+            margin-bottom: 32px;
+        }
+
+    }
+
+    &-animation {
+        min-height: 550px;
+        min-width: 600px;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 4vw;
+        margin-top: 20vh;
+
+        .featured-items {
+            display: flex;
+
+            &>* {
+                border-left: 2px solid #ffffff50;
+                margin-left: 16px;
+                padding-left: 16px;
+
+                &:first-of-type {
+                    border: none;
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .quote {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: right;
+
+            &--text {
+                font-family: "Maven Pro";
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            &--author {
+                font-size: theme.$font-size-sm;
+            }
+        }
+
+    }
+}
+
+.featured-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &--value {
+        font-family: "Maven Pro";
+        font-size: 60px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        margin-top: 4vh;
+
+        header {
+            flex-direction: column;
+
+            .hero-header {
+                margin-bottom: 8vh;
+            }
+        }
+
+        &-content {
+            margin-top: 5vh;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+    }
+
+}

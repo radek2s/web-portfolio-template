@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Icon, IconName } from "../icons";
 import styles from './techStack.module.scss';
-import { SlideUpWrapper } from "@/layout/SlideUpWrapper";
+import { SlideUpWrapper } from "@/layout/animations/SlideUpWrapper";
 import { Tooltip } from "@/layout/Tooltip";
 
 type TechStackType = {

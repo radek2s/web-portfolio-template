@@ -2,7 +2,7 @@ import Card from "@/layout/Card";
 import { FC } from "react";
 import Image from 'next/image';
 import styles from './projectCard.module.scss'
-import { MOTION_DURATION_3, SlideUpWrapper } from "@/layout/SlideUpWrapper";
+import { MOTION_DURATION_3, SlideUpWrapper } from "@/layout/animations/SlideUpWrapper";
 import { Icon } from "../icons";
 
 export interface ProjectData {

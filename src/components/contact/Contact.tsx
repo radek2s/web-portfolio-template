@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from './Contact.module.scss'
-import { SlideUpWrapper } from "@/layout/SlideUpWrapper";
+import { SlideUpWrapper } from "@/layout/animations/SlideUpWrapper";
 import { SectionWrapper } from "@/layout/SectionWrapper";
 
 export const Contact: FC = () => {

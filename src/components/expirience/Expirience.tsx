@@ -2,7 +2,7 @@ import { FC } from "react";
 import Card from "../../layout/Card";
 import styles from './Expirience.module.scss'
 import { SectionWrapper } from "@/layout/SectionWrapper";
-import { SlideUpWrapper } from "@/layout/SlideUpWrapper";
+import { SlideUpWrapper } from "@/layout/animations/SlideUpWrapper";
 
 export const Expirience: FC = () => {
     return (

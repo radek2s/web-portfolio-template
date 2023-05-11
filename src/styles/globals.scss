@@ -238,3 +238,14 @@ button {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .app-section {
+    margin-left: 12px;
+    padding-left: 12px;
+
+    &::before {
+      transform: translate(-26px, 42px) !important;
+    }
+  }
+}
