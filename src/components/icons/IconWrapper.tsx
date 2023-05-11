@@ -19,10 +19,14 @@ import { WordPressIcon } from "./WordPress";
 import { LinkedInIcon } from "./LinkedIn";
 import { GitHubIcon } from "./GitHub";
 import { OpenIcon } from "./Open";
+import { CertificateIcon } from "./Certificate";
+import { PersonWorkIcon } from "./PersonWork";
+import { StudiesIcon } from "./Studies";
+import { CaretDownIcon } from "./CaretDown";
 
 export type IconName = 'adobe-xd' | 'angular' | 'css' | 'docker' | 'figma' | 'github' | 'html' | 'java'
     | 'java-script' | 'kotlin' | 'linked-in' | 'node-js' | 'react' | 'sass' | 'type-script' | 'vue' | 'word-press'
-    | 'open'
+    | 'caret-down' | 'open' | 'person-work' | 'certificate' | 'studies'
 
 function getIcon(iconName: IconName) {
     switch (iconName) {
@@ -43,7 +47,11 @@ function getIcon(iconName: IconName) {
         case 'type-script': return <TypeScriptIcon />
         case 'vue': return <VueIcon />
         case 'word-press': return <WordPressIcon />
+        case 'caret-down': return <CaretDownIcon />
+        case 'certificate': return <CertificateIcon />
         case 'open': return <OpenIcon />
+        case 'person-work': return <PersonWorkIcon />
+        case 'studies': return <StudiesIcon />
         default: throw new Error("Unsupported icon type!")
     }
 }

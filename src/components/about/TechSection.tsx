@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { Icon, IconName } from "../icons";
-import styles from './techStack.module.scss';
 import { SlideUpWrapper } from "@/layout/animations/SlideUpWrapper";
 import { Tooltip } from "@/layout/Tooltip";
+import { Icon, IconName } from "../icons";
+import styles from './techSection.module.scss';
 
 type TechStackType = {
     icon: IconName,
@@ -56,15 +56,23 @@ const knownTechStack: TechStackType[] = [{
     tooltip: 'WordPress'
 }]
 
-export const TechStackIcons: FC = () => {
+/**
+ * Tech Section Wrapper Component
+ * Render list of all known languages, libraries or tools
+ * that you are familiar with.
+ */
+export const TechSection: FC = () => {
     return (
         <SlideUpWrapper className={styles['tech--wrapper']} duration={0.08}>
-            {knownTechStack.map(({ icon, tooltip }) => <div key={icon} className={styles['tech-badge']}>
-                <Tooltip text={tooltip}>
-                    <Icon name={icon} className={styles['tech-badge--icon']} />
-                </Tooltip>
-                {/* <span className={styles['tech-badge--tooltip']}></span> */}
-            </div>)}
+            {knownTechStack.map(({ icon, tooltip }) =>
+                <div key={icon} className={styles['tech-badge']}>
+                    <Tooltip text={tooltip}>
+                        <Icon name={icon} className={styles['tech-badge--icon']} />
+                    </Tooltip>
+                </div>
+            )}
         </SlideUpWrapper>
     )
 }
+
+export default TechSection

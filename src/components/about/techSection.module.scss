@@ -1,0 +1,33 @@
+.tech {
+
+    &--wrapper {
+        display: flex;
+        gap: 4px;
+    }
+
+    &-badge {
+        position: relative;
+
+        &--icon {
+            &:hover {
+                transform: translateY(-3px);
+                transition: transform 0.125s ease-out;
+
+                &>svg path {
+                    fill: #7871F5
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tech {
+        &--wrapper {
+            margin: 0 32px;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

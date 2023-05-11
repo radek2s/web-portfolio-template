@@ -36,7 +36,7 @@ export const MainAnimation: FC = () => {
         <div className={`${styles.header}`}>
             <p className={`${isActive(0)}`}>Design</p>
             <p className={`${isActive(1)}`}>Develop</p>
-            <p className={`${isActive(2)}`}>Deploy</p>
+            <p className={`${isActive(2)}`}>Deliver</p>
         </div>
 
         {currentStep === 0 && (
