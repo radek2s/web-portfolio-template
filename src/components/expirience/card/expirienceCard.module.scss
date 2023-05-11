@@ -43,3 +43,42 @@
     transform: rotate(180deg);
     transition: transform 0.1s ease-in-out;
 }
+
+
+@media screen and (max-width: 768px) {
+    .card {
+        font-size: 16px;
+
+        header {
+            align-items: flex-start;
+
+            .header {
+                &-icon {
+                    height: 18px;
+                    width: 18px;
+                }
+
+                &-title {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &-company {
+                    font-weight: 400;
+                    opacity: 0.8;
+                }
+
+                &-toggle {
+                    margin-left: 4px;
+                    cursor: pointer;
+                    transition: transform 0.1s ease-in-out;
+
+                    &>div {
+                        height: 18px;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

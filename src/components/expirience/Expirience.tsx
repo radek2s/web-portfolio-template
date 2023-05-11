@@ -12,19 +12,21 @@ export const Expirience: FC = () => {
             <SlideUpWrapper className={styles['expirience-timeline']}>
                 <ExpirienceCard
                     icon="person-work"
-                    title="Full-Stack Developer @ Nivalit Sp. z o.o."
-                    timeline="2022 - present"
+                    position="Full-Stack Developer"
+                    company="Nivalit Sp. z o.o."
+                    timeline="2022&nbsp;-&nbsp;present"
                 >
-                    In Nivalit I am a Team Leader for Vivelio project
                 </ExpirienceCard>
                 <ExpirienceCard
                     icon="person-work"
-                    title="Full-Stack Developer @ SoftQ Sp. z o.o."
-                    timeline="2021 - 2022"
+                    position="Full-Stack Developer"
+                    company="SoftQ Sp. z o.o."
+                    timeline="2021&nbsp;-&nbsp;2022"
                 />
                 <ExpirienceCard
                     icon="studies"
-                    title="MSc in Telecommunications @ AGH UST Kraków"
+                    position="MSc in Telecommunications"
+                    company="AGH UST Kraków"
                     timeline="2021"
                 />
             </SlideUpWrapper>

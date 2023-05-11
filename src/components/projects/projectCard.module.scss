@@ -90,3 +90,65 @@
 
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    /* TODO: Change images to be below box instead of beeing cut */
+    .project-wrapper {
+        align-items: flex-end;
+        flex-direction: column;
+
+        &--card {
+            padding: 16px;
+            flex-basis: 100%;
+            padding-bottom: 48px;
+        }
+
+        &--image {
+            width: 350px;
+            margin-top: -64px;
+        }
+
+        &.left {
+            .project-wrapper {
+                &--card {
+                    padding-right: 0px;
+                }
+
+                &--image {
+                    margin-left: unset;
+                    margin-right: -90px;
+                }
+            }
+        }
+
+        &.right {
+            flex-direction: column;
+
+            .project-wrapper {
+
+                &--card {
+                    padding-left: 0px;
+                }
+
+                &--image {
+                    align-self: flex-start;
+                    margin-left: -90px;
+                }
+            }
+        }
+    }
+
+    .project {
+        &--stack {
+            font-size: 16px;
+            letter-spacing: 0.1ch;
+        }
+
+        &--title {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+    }
+
+}
