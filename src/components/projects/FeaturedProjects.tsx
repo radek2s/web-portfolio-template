@@ -1,11 +1,10 @@
-import Card from "@/layout/Card";
 import { FC } from "react";
-import Image from 'next/image';
-import styles from './work.module.scss';
-import { ProjectCard } from "./ProjectCard";
 import { SectionWrapper } from "@/layout/SectionWrapper";
 
-export const Work: FC = () => {
+import { ProjectCard } from "./card";
+import styles from './featuredProjects.module.scss';
+
+export const FeaturedProjects: FC = () => {
     return (<SectionWrapper>
         <div className="content-section">
             <h2>Featured projects</h2>
@@ -43,16 +42,8 @@ export const Work: FC = () => {
                         demoUrl: "https://radek2s.github.io/BetKeeper/#/list"
                     }}
                 />
-
-
-
             </div>
-
-            {/* <div className={styles['link-wrapper']}>
-                <a href="" className={styles['link--element']}>show more</a>
-            </div> */}
         </div>
-
     </SectionWrapper>
     )
 }

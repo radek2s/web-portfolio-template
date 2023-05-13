@@ -7,10 +7,10 @@ export const Footer: FC = () => {
         <footer>
             <div className={styles['page-footer']}>
                 <div className={styles['page-footer--links']}>
-                    <a href="https://github.com/radek2s">
+                    <a href="https://github.com/radek2s" target="_blank">
                         <Icon name="github" />
                     </a>
-                    <a href="https://www.linkedin.com/in/rados%C5%82aw-jajko-78a153248/">
+                    <a href="https://www.linkedin.com/in/rados%C5%82aw-jajko-78a153248/" target="_blank">
                         <Icon name="linked-in" />
                     </a>
                 </div>

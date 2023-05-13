@@ -2,7 +2,7 @@
 
 .hero {
     min-height: 85vh;
-    margin-top: 15vh;
+    margin-top: 12vh;
 
     header {
         display: flex;
@@ -11,9 +11,9 @@
 
     &-header .header {
         &--subtitle {
-            font-family: 'Maven Pro';
+            font-family: theme.$font-family-title;
+            font-size: theme.$font-size-h3;
             font-weight: 600;
-            font-size: 20px;
             margin-bottom: calc(-1 * theme.$font-size-base);
         }
 
@@ -38,7 +38,7 @@
         display: flex;
         justify-content: space-between;
         margin: 0 4vw;
-        margin-top: 15vh;
+        margin-top: 8vh;
 
         .featured-items {
             display: flex;
@@ -63,9 +63,9 @@
             text-align: right;
 
             &--text {
-                font-family: "Maven Pro";
+                font-family: theme.$font-family-title;
+                font-size: theme.$font-size-h4;
                 font-weight: 600;
-                font-size: 20px;
             }
 
             &--author {
@@ -82,13 +82,13 @@
     gap: 8px;
 
     &--value {
-        font-family: "Maven Pro";
-        font-size: 60px;
+        font-family: theme.$font-family-title;
+        font-size: theme.$font-size-h2;
     }
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: theme.$breakpoint-sm) {
 
     .hero {
         margin-top: 4vh;
@@ -105,6 +105,18 @@
             margin-top: 5vh;
             flex-direction: column;
             gap: 32px;
+        }
+
+    }
+
+}
+
+@media screen and (min-height: 1080px) {
+    .hero {
+        margin-top: 16vh;
+
+        &-content {
+            margin-top: 24vh;
         }
 
     }

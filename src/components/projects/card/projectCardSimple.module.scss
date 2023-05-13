@@ -1,3 +1,5 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
 .simple-project-card {
     box-sizing: border-box;
     width: 100%;
@@ -5,9 +7,9 @@
 
 
     h4 {
-        font-weight: 900;
-        font-size: 1.4em;
-        font-family: 'Maven Pro';
+        font-weight: 800;
+        font-size: theme.$font-size-h4;
+        font-family: theme.$font-family-title;
         margin: 0;
         margin-top: 8px;
         margin-bottom: 4px;
@@ -17,19 +19,23 @@
 
         &--stack {
             text-transform: uppercase;
-            font-family: 'Maven Pro';
-            font-weight: 500;
-            margin-bottom: 16px;
-            letter-spacing: 0.2ch;
+            font-family: theme.$font-family-title;
+            font-weight: 400;
+            margin-bottom: theme.$font-size-base;
+            letter-spacing: 0.1ch;
+        }
+
+        &--description {
+            margin-top: 4px;
         }
 
         &--actions {
             display: flex;
-            padding-top: 8px;
+            padding: theme.$font-size-base 0;
 
             a {
                 &:hover svg path {
-                    fill: #7871F5;
+                    fill: theme.$primary-color-50;
                 }
 
                 &>div {

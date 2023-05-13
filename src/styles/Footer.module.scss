@@ -1,3 +1,5 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
 .page-footer {
     display: flex;
     width: 100%;
@@ -14,7 +16,7 @@
         a {
             &:hover {
                 svg path {
-                    fill: #7871F5;
+                    fill: theme.$primary-color-50;
                 }
             }
 

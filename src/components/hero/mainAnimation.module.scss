@@ -45,7 +45,6 @@ $accent-color: #AE8CFA;
         height: 64px;
         width: calc(100% - 16px);
         @include scaleDownAnim(1s);
-        // animation: desing-animation 4s;
     }
 
     &Content {

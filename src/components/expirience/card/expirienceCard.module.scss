@@ -1,14 +1,17 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
 .card {
+    font-size: theme.$font-size-h4;
     font-weight: 600;
-    font-size: 24px;
 
     header {
         display: flex;
         align-items: center;
 
         .header {
+            height: 32px;
+
             &-icon {
-                height: 32px;
                 width: 32px;
             }
 
@@ -34,7 +37,7 @@
         border-top: 1px solid rgba(255, 255, 255, 0.288);
         padding-top: 16px;
         margin-top: 16px;
-        font-size: 16px;
+        font-size: theme.$font-size-base;
         font-weight: 400;
     }
 }
@@ -47,7 +50,7 @@
 
 @media screen and (max-width: 768px) {
     .card {
-        font-size: 16px;
+        font-size: theme.$font-size-base;
 
         header {
             align-items: flex-start;

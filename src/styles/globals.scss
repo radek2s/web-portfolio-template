@@ -29,9 +29,9 @@ main {
 
 body {
   color: theme.$white-color;
-  font-family: "LexendDeca";
-  font-weight: 300;
+  font-family: theme.$font-family-base;
   font-size: theme.$font-size-base;
+  font-weight: 300;
   background: linear-gradient(90deg,
       theme.$background-color-40 0%,
       theme.$background-color-50 100%);
@@ -43,7 +43,8 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   color: theme.$primary-color-50;
   font-family: "Maven Pro";
   font-weight: 900;
@@ -58,17 +59,22 @@ h2 {
   font-size: theme.$font-size-h2;
 }
 
+h3 {
+  font-size: theme.$font-size-h3;
+}
+
 .btn,
 button {
   background: none;
-  padding: 15px 32px;
-  font-family: "Maven Pro";
   text-decoration: none;
+  font-size: theme.$font-size-h4;
+  font-family: theme.$font-family-title;
+  line-height: theme.$font-size-h4;
   font-weight: 600;
-  font-size: theme.$font-size-h3;
   color: theme.$primary-color-50;
   border: solid theme.$primary-color-50 1px;
   border-radius: 8px;
+  padding: 16px 32px;
 
   &:hover {
     cursor: pointer;
@@ -83,7 +89,7 @@ button {
 .card {
   background-color: #29292940;
   border: 1px solid #E1E1E127;
-  padding: 16px;
+  padding: 8px 16px;
   border-radius: 8px;
 
   &.hover {
@@ -102,7 +108,7 @@ button {
       margin-top: -32px;
       top: var(--y);
       left: var(--x);
-      background-color: white;
+      background-color: theme.$white-color;
       border-radius: 300px;
       filter: blur(100px);
       z-index: -1;
@@ -117,8 +123,6 @@ button {
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 24px;
-  // animation: slide-up-in 1s cubic-bezier(0.1, 0.9, 0.2, 1);
-
 }
 
 .content-section {
@@ -144,6 +148,7 @@ button {
 .app-section {
   margin-left: 64px;
   padding: 10px 0;
+  padding-bottom: 8vh;
   @include decorativeBar(theme.$primary-color-50);
 
   &:nth-of-type(2) {
@@ -222,6 +227,21 @@ button {
     visibility: hidden;
     text-align: center;
 
+    &.right {
+      left: 105%;
+      margin-left: 4px;
+      padding: 8px;
+      top: -25%;
+      width: max-content;
+      max-width: 260px;
+      text-align: left;
+
+      &::after {
+        content: "";
+        display: none;
+      }
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -239,7 +259,13 @@ button {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: theme.$breakpoint-sm) {
+
+  html,
+  body {
+    font-size: theme.$font-size-base-mobile;
+  }
+
   .app-section {
     margin-left: 12px;
     padding-left: 12px;

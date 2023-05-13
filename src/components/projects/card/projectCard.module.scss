@@ -1,3 +1,5 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
 .project-wrapper {
     display: flex;
     align-items: center;
@@ -37,7 +39,6 @@
                 text-align: right;
 
                 .project--actions {
-                    // display: flex;
                     flex-direction: row-reverse;
                 }
             }
@@ -54,22 +55,22 @@
 
 .project {
     &--title {
-        font-size: 60px;
-        font-family: 'Maven Pro';
+        font-size: theme.$font-size-h2;
+        font-family: theme.$font-family-title;
         font-weight: 900;
         margin: 0;
     }
 
     &--stack {
+        letter-spacing: 0.1ch;
         text-transform: uppercase;
-        font-family: 'Maven Pro';
-        font-size: 20px;
-        font-weight: 600;
-        letter-spacing: 0.2ch;
+        font-family: theme.$font-family-title;
+        font-size: theme.$font-size-h4;
+        font-weight: 500;
     }
 
     &--description {
-        margin-bottom: 16px;
+        margin-bottom: theme.$font-size-base;
     }
 
     &--actions {
@@ -79,7 +80,7 @@
 
         a {
             &:hover svg path {
-                fill: #7871F5;
+                fill: theme.$primary-color-50;
             }
 
             &>div {
@@ -106,7 +107,7 @@
 
         &--image {
             width: 350px;
-            margin-top: -64px;
+            margin-top: -32px;
         }
 
         &.left {
@@ -117,7 +118,7 @@
 
                 &--image {
                     margin-left: unset;
-                    margin-right: -90px;
+                    margin-right: 0px;
                 }
             }
         }
@@ -133,7 +134,7 @@
 
                 &--image {
                     align-self: flex-start;
-                    margin-left: -90px;
+                    margin-left: -50px;
                 }
             }
         }
@@ -141,12 +142,12 @@
 
     .project {
         &--stack {
-            font-size: 16px;
+            // font-size: 16px;
             letter-spacing: 0.1ch;
         }
 
         &--title {
-            font-size: 32px;
+            // font-size: 32px;
             margin-bottom: 16px;
         }
     }
