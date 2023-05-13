@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://radek2s-portfolio.vercel.app
+
+# Sitemaps
+Sitemap: https://radek2s-portfolio.vercel.app/sitemap.xml

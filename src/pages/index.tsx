@@ -7,8 +7,11 @@ import { Expirience } from '@/components/expirience/Expirience'
 import { FeaturedProjects } from '@/components/projects/FeaturedProjects'
 import { OtherProjects } from '@/components/projects/OtherProjects'
 import { Contact } from '@/components/contact/Contact'
+import { Policy } from '@/layout/Policy'
+
 
 export default function Home() {
+  const GOOGLE_ANALITICS_TAG = process.env.GOOGLE_ANALITICS_TAG || ''
   return (
     <>
       <Head>
@@ -25,6 +28,7 @@ export default function Home() {
         <OtherProjects />
         <Contact />
         <Footer />
+        {GOOGLE_ANALITICS_TAG && <Policy />}
       </main>
     </>
   )

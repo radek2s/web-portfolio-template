@@ -12,7 +12,7 @@ interface Props {
 export const FeaturedItem: FC<Props> = ({ result, name, delay }) => {
     return (<div className={styles['featured-item']}>
         <span className={styles['featured-item--value']}><AnimatedCounter to={result} duration={COUNTER_ANIMATION_DURATION} delay={delay} /></span>
-        <span>{name.split("\\n").map((text, i) => <><span key={i}>{text}</span><br /></>)}</span>
+        <span>{name.split("\\n").map((text, i) => <span key={i}><span>{text}</span><br /></span>)}</span>
     </div>)
 
 }

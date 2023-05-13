@@ -86,6 +86,22 @@ button {
   }
 }
 
+.btn-small {
+  font-size: theme.$font-size-base;
+  padding: 8px 16px;
+}
+
+.btn-text {
+  font-size: theme.$font-size-base;
+  padding: 0;
+  border: none;
+
+  &:hover {
+    background: none;
+    text-decoration: underline
+  }
+}
+
 .card {
   background-color: #29292940;
   border: 1px solid #E1E1E127;
