@@ -1,3 +1,5 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
 .tech {
 
     &--wrapper {
@@ -14,14 +16,24 @@
                 transition: transform 0.125s ease-out;
 
                 &>svg path {
-                    fill: #7871F5
+                    fill: theme.$primary-color-50
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: theme.$breakpoint-md) {
+    .tech {
+        &--wrapper {
+            margin: 0 64px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: theme.$breakpoint-sm) {
     .tech {
         &--wrapper {
             margin: 0 32px;

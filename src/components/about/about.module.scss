@@ -85,7 +85,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: theme.$breakpoint-sm) {
     .about {
         &-wrapper {
             flex-direction: column-reverse;
