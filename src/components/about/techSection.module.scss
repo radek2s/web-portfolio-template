@@ -1,0 +1,45 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
+.tech {
+
+    &--wrapper {
+        display: flex;
+        gap: 4px;
+    }
+
+    &-badge {
+        position: relative;
+
+        &--icon {
+            &:hover {
+                transform: translateY(-3px);
+                transition: transform 0.125s ease-out;
+
+                &>svg path {
+                    fill: theme.$primary-color-50
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: theme.$breakpoint-md) {
+    .tech {
+        &--wrapper {
+            margin: 0 64px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: theme.$breakpoint-sm) {
+    .tech {
+        &--wrapper {
+            margin: 0 32px;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

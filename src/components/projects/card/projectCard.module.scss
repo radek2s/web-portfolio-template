@@ -1,0 +1,155 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
+.project-wrapper {
+    display: flex;
+    align-items: center;
+
+    &--card {
+        padding: 60px;
+        flex-basis: 60%;
+    }
+
+    &--image {
+        height: 100%;
+        max-width: 550px;
+        flex-basis: 70%;
+        z-index: 5;
+    }
+
+    &.left {
+        .project-wrapper {
+            &--card {
+                padding-right: 100px;
+            }
+
+            &--image {
+                margin-left: -70px;
+
+
+            }
+        }
+    }
+
+    &.right {
+        flex-direction: row-reverse;
+
+        .project-wrapper {
+            &--card {
+                padding-left: 100px;
+                text-align: right;
+
+                .project--actions {
+                    flex-direction: row-reverse;
+                }
+            }
+
+            &--image {
+                margin-right: -100px;
+                z-index: 5;
+
+            }
+
+        }
+    }
+}
+
+.project {
+    &--title {
+        font-size: theme.$font-size-h2;
+        font-family: theme.$font-family-title;
+        font-weight: 900;
+        margin: 0;
+    }
+
+    &--stack {
+        letter-spacing: 0.1ch;
+        text-transform: uppercase;
+        font-family: theme.$font-family-title;
+        font-size: theme.$font-size-h4;
+        font-weight: 500;
+    }
+
+    &--description {
+        margin-bottom: theme.$font-size-base;
+    }
+
+    &--actions {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        a {
+            &:hover svg path {
+                fill: theme.$primary-color-50;
+            }
+
+            &>div {
+                width: 2.3em;
+                height: 2.3em;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* TODO: Change images to be below box instead of beeing cut */
+    .project-wrapper {
+        align-items: flex-end;
+        flex-direction: column;
+
+        &--card {
+            padding: 16px;
+            flex-basis: 100%;
+            padding-bottom: 48px;
+        }
+
+        &--image {
+            width: 350px;
+            margin-top: -32px;
+        }
+
+        &.left {
+            .project-wrapper {
+                &--card {
+                    padding-right: 0px;
+                }
+
+                &--image {
+                    margin-left: unset;
+                    margin-right: 0px;
+                }
+            }
+        }
+
+        &.right {
+            flex-direction: column;
+
+            .project-wrapper {
+
+                &--card {
+                    padding-left: 0px;
+                }
+
+                &--image {
+                    align-self: flex-start;
+                    margin-left: -50px;
+                }
+            }
+        }
+    }
+
+    .project {
+        &--stack {
+            // font-size: 16px;
+            letter-spacing: 0.1ch;
+        }
+
+        &--title {
+            // font-size: 32px;
+            margin-bottom: 16px;
+        }
+    }
+
+}

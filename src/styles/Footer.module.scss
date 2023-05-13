@@ -1,0 +1,29 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
+.page-footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 3vh;
+
+
+    &--links {
+        display: flex;
+        gap: 8px;
+
+        a {
+            &:hover {
+                svg path {
+                    fill: theme.$primary-color-50;
+                }
+            }
+
+            &>div {
+                height: 48px;
+                width: 48px;
+            }
+        }
+    }
+}

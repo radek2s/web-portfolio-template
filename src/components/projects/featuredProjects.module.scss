@@ -1,0 +1,18 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.link-wrapper {
+    display: flex;
+    width: 100%;
+    font-size: 24px;
+    justify-content: center;
+    padding: 5vh 0;
+
+    a {
+        color: #7871F5;
+        text-decoration: none;
+    }
+}

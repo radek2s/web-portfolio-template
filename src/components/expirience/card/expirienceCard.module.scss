@@ -1,0 +1,108 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
+.card {
+    font-size: theme.$font-size-h4;
+    font-weight: 600;
+
+    header {
+        display: flex;
+        align-items: center;
+
+        .header {
+            height: 32px;
+
+            &-icon {
+                width: 32px;
+            }
+
+            &-title {
+                padding-left: 8px;
+                flex-grow: 1;
+            }
+
+            &-toggle {
+                margin-left: 8px;
+                cursor: pointer;
+                transition: transform 0.1s ease-in-out;
+
+                &>div {
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+        }
+    }
+
+    .section-wrapper {
+        border-top: 1px solid rgba(255, 255, 255, 0.288);
+        padding-top: 16px;
+        margin-top: 16px;
+        font-size: theme.$font-size-base;
+        font-weight: 400;
+    }
+}
+
+.active {
+    transform: rotate(180deg);
+    transition: transform 0.1s ease-in-out;
+}
+
+
+@media screen and (max-width: theme.$breakpoint-md) {
+    .card {
+        font-size: theme.$font-size-base;
+
+        header {
+
+            .header {
+                &-title {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &-company {
+                    font-weight: 400;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: theme.$breakpoint-sm) {
+    .card {
+        font-size: theme.$font-size-base;
+
+        header {
+            align-items: flex-start;
+
+            .header {
+                &-icon {
+                    height: 18px;
+                    width: 18px;
+                }
+
+                &-title {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &-company {
+                    font-weight: 400;
+                    opacity: 0.8;
+                }
+
+                &-toggle {
+                    margin-left: 4px;
+                    cursor: pointer;
+                    transition: transform 0.1s ease-in-out;
+
+                    &>div {
+                        height: 18px;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@use '@/styles/theme/gamification.scss' as theme;
+
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+    gap: 32px;
+}
+
+@media screen and (max-width: theme.$breakpoint-md) {
+    .projects-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: theme.$breakpoint-sm) {
+    .projects-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
