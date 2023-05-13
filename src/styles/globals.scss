@@ -289,6 +289,14 @@ button {
     &::before {
       transform: translate(-26px, 42px) !important;
     }
+
+    &.end {
+      margin-left: 0;
+
+      &::before {
+        transform: translate(-13px, 42px) !important;
+      }
+    }
   }
 
   .content-section {
