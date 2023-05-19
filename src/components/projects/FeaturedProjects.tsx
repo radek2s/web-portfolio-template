@@ -25,9 +25,9 @@ export const FeaturedProjects: FC = () => {
                     imageSrc={"/images/proj_FrameworkHero.png"}
                     project={{
                         name: "Framework-Hero",
-                        stack: ["React", "ANGULAR", "VUE", "SCSS", "CI/CD"],
+                        stack: ["React", "ANGULAR", "VUE", "MicroFrontends", "CI/CD"],
                         description: "Idea for this project was to create a shared structure of the pages for three most popular frontend frameworks. At every page I try to explain how to achieve some action in specific framework. Most of the concepts are very simillar in various frameworks but the way how to achive them is a little bit different.\nIf you are a developer that has to switch the framework you can check this project.",
-                        demoUrl: "https://radek2s.github.io/Framework-Hero/angular",
+                        demoUrl: "https://radek2s.github.io/Framework-Hero/root",
                         repositoryUrl: "https://github.com/radek2s/Framework-Hero"
                     }}
                 />
